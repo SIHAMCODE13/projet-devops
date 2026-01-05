@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: 'health-service'
+    static_configs:
+      - targets: ['health-service-app:8000']  # le nom du service docker

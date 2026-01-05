@@ -1,16 +1,24 @@
+version: '3.8'
+
 services:
-  app:
+  health-service-app:
     build: .
     container_name: health-service-app
-    expose:
-      - "8000"
-
-  nginx:
-    image: nginx:alpine
-    container_name: health-service-nginx
     ports:
-      - "8081:80"
+    - "8001:8000"  # expose 8000 du container sur 8001 de l'hôte
+    networks:
+      - devops-network
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
     volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-    depends_on:
-      - app
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    networks:
+      - devops-network
+
+networks:
+  devops-network:
+    driver: bridge
