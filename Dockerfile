@@ -1,19 +1,13 @@
 FROM python:3.11-slim
 
-# نحددو الدوسي داخل الكونتينر
 WORKDIR /app
 
-# ننسخو المتطلبات
 COPY requirements.txt .
-
-# نثبّتو الليبري
 RUN pip install --no-cache-dir -r requirements.txt
 
-# ننسخو الكود
 COPY . .
 
-# نحلّو البورت
-EXPOSE 8000
+ENV SERVICE_NAME=health-service
+ENV SERVICE_VERSION=1.0.0
 
-# نشغّلو السيرفر
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
