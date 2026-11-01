@@ -122,8 +122,8 @@ Tous les services partagent le réseau Docker `devops-network` et se joignent pa
 Prérequis : [Docker Desktop](https://www.docker.com/products/docker-desktop/) démarré.
 
 ```bash
-git clone https://github.com/VOTRE-UTILISATEUR/VOTRE-DEPOT.git
-cd VOTRE-DEPOT
+git clone https://github.com/https://github.com/SIHAMCODE13/projet-devops.git
+cd projet-devops
 docker compose up --build
 ```
 
