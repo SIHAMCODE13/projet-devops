@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ service_name }} – Dashboard</title>
+    <link href="/static/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Health Service Dashboard</h1>
+    </header>
+    <main>
+        <div class="card">
+            <h2>Service : <span id="service">{{ service }}</span></h2>
+            <p>Statut :
+                <strong id="status" class="badge {{ 'up' if status == 'UP' else 'down' }}">{{ status }}</strong>
+            </p>
+            <p>Version : <span id="version">{{ version }}</span></p>
+            <p>Uptime : <span id="uptime">{{ uptime_seconds }}</span> s</p>
+            <p class="muted">Dernière vérification : <span id="last-check">–</span></p>
+        </div>
+        <p class="links">
+            <a href="/docs">API docs</a> ·
+            <a href="/api/health">/api/health</a> ·
+            <a href="/metrics">/metrics</a>
+        </p>
+    </main>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

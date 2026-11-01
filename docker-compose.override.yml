@@ -1,0 +1,11 @@
+# Surcharge de développement, chargée automatiquement par `docker compose up`.
+# Le code local est monté dans le conteneur et uvicorn recharge à chaque modification.
+
+services:
+  app:
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    environment:
+      # Nécessaire pour détecter les changements de fichiers sous Windows / Docker Desktop
+      WATCHFILES_FORCE_POLLING: "true"
+    volumes:
+      - ./app:/app/app

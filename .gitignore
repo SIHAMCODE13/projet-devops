@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Secrets / configuration locale
+.env
+
+# IDE / OS
+.idea/
+.vscode/*
+!.vscode/settings.json
+.DS_Store
+Thumbs.db
