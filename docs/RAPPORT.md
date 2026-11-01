@@ -2,14 +2,6 @@
 
 ### Conception et mise en œuvre d'une chaîne DevOps complète autour d'un microservice FastAPI
 
-| | |
-|---|---|
-| **Auteur** | [Votre nom] |
-| **Date** | 1er novembre 2026 |
-| **Version du document** | 1.0 |
-| **Dépôt** | [lien du dépôt GitHub] |
-
----
 
 ## Table des matières
 
