@@ -10,10 +10,7 @@ Microservice **FastAPI** de supervision, conteneurisé avec **Docker**, exposé 
 ![Grafana](https://img.shields.io/badge/Grafana-11.3-F46800?logo=grafana&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white)
 
-<!--
-Badge de statut de la CI : remplacez VOTRE-UTILISATEUR/VOTRE-DEPOT puis supprimez les marques de commentaire.
-![CI](https://github.com/VOTRE-UTILISATEUR/VOTRE-DEPOT/actions/workflows/ci-cd.yml/badge.svg)
--->
+
 
 > 📄 Le **rapport technique détaillé** du projet est disponible ici : [docs/RAPPORT.md](docs/RAPPORT.md)
 
@@ -303,4 +300,4 @@ Problème de fins de ligne Windows (CRLF). Le fichier `.gitattributes` force le 
 
 ## Auteur
 
-**[Votre nom]** – projet réalisé dans le cadre d'un apprentissage DevOps.
+**Siham Talbi** – projet réalisé dans le cadre d'un apprentissage DevOps.
